@@ -7,7 +7,7 @@ from openai import AsyncOpenAI
 from system.prompts import MAP, ANALYZE, FIND_BUGS, peprare_summarize_prompt
 import aiofiles
 import subprocess
-from groq import Groq
+from groq import AsyncGroq
 
 # Load secrets
 main.load_dotenv()
@@ -50,7 +50,7 @@ solidity_context = read_solidity_files(folder_path)
 
 # Initialize OpenAI client & Embedding model
 groq_key = os.environ['GROQ_API_KEY']
-groq_client = AsyncOpenAI(api_key=groq_key)
+groq_client = AsyncGroq(api_key=groq_key)
 prod_model = "llama-3.1-70b-versatile"
 
 async def summarize(solidity_context):
