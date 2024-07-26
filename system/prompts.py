@@ -12,7 +12,7 @@ Follow these steps to create the Mermaid graph:
 4. Create edges to represent these interactions.
 5. Ignore any self-referential interactions.
 
-Use the following Mermaid syntax as a template":
+Use the following Mermaid syntax as a template:
 
 sequenceDiagram
     actor User
@@ -181,7 +181,6 @@ async def peprare_summarize_prompt(focus):
         ###############
 
         Here's the Solidity code to analyze, begin:
-
         '''
         return SUMMARIZE
     except Exception as e:
